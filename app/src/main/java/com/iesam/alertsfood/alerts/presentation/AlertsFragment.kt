@@ -32,5 +32,4 @@ class AlertsFragment: Fragment() {
     fun setupView(){
 
     }
-
 }
