@@ -1,5 +1,7 @@
 package com.iesam.alertsfood.alerts.presentation
 
+import android.content.Context
+import android.content.ContextParams
 import androidx.lifecycle.ViewModel
 import com.iesam.alertsfood.alerts.data.AlertDataRepository
 import com.iesam.alertsfood.alerts.domain.Alert
@@ -10,7 +12,7 @@ import kotlinx.coroutines.withContext
 class AlertsViewModel: ViewModel() {
     private val _uiState = UiState()
     val uiState = _uiState
-    val alertDataRepository = AlertDataRepository()
+    val alertDataRepository = AlertDataRepository(Context)
 
     fun getAlerts(){
         uiState.alerts =alertDataRepository.getAlerts()

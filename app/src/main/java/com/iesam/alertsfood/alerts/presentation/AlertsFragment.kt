@@ -19,7 +19,6 @@ class AlertsFragment: Fragment() {
         val viewModel by lazy {
             val alertDataRepository = AlertDataRepository(requireContext())
         }
-
     }
 
 
